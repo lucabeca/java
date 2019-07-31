@@ -1,0 +1,149 @@
+﻿#
+# zPAlmas v1.2
+# Desenvolvido por zPatuncio_
+#
+# Conexão com MySQL (Opcional)
+MYSQL:
+  USAR: false
+  HOST: 'localhost'
+  DATABASE: 'root'
+  USUARIO: 'root'
+  SENHA: ''
+# Sistema de sons
+# Formato:
+# Som;volume;lentidão (O Default é 1.0!)
+# Sons 1.8: https://github.com/Attano/Spigot-1.8/blob/master/org/bukkit/Sound.java
+# Sons 1.12: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+SONS:
+  ATIVAR: true
+  RESGATOU: 'LEVEL_UP;1.0F;1.0F'
+  ABRIR: 'CHEST_OPEN;1.0F;1.0F'
+  ABRIROUTRO: 'CLICK;1.0F;1.0F'
+  RESGATAR: 'LEVEL_UP;1.0F;1.0F'
+  COMPROU: 'LEVEL_UP;1.0F;1.0F'
+# Delay Anti Free-Kill
+DELAY:
+  USAR: true
+  # Tempo em segundos!
+  TEMPO: 60
+CONFIGURACOES:
+  # Delay para carregar o almas top (Em minutos)
+  DELAYTOP: 1
+  # Spawnar o NPC ao servidor iniciar.
+  SPAWNONLOAD: true
+  # Remover Lore ao comprar o item
+  REMOVERLORE: true
+  # O mercador, caso queira saber os nomes visite links abaixo:
+  # 1.8: http://docs.codelanx.com/Bukkit/1.8/org/bukkit/entity/EntityType.html
+  # 1.12: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+  NPC: 'SKELETON'
+  # Chance de vir a alma do jogador
+  CHANCE: 70
+# Mensagens 100% configuráveis que iram aparecer quando utilizar o plugin.
+MENSAGENS:
+  ALMASVER: '&cVocê tem {almas} almas!'
+  ALMASVEROUTRO: '&cO jogador {jogador} tem {almas} almas!'
+  # Esta mensagem abaixo irá aparecer se você não estiver utilizando MySQL, pois o Almas top só estará disponível com MySQL!
+  ATIVEMYSQL: '&cO almas top não está disponível.'
+  MERCADORSETADO: '&cMercador setado ocm sucesso.'
+  NUMEROSINVALIDOS: '&cUtilize números válidos.'
+  SEMPERMISSAO: '&cVocê não tem permissão suficiente.'
+  NAOENCONTRADO: '&cJogador não encontrado.'
+  CONFIGRECARREGADA: '&6* &fConfig recarregada.'
+  ALMASMODIFICADAS: '&6* &fSuas almas foram setadas para {valor}'
+  ALMASMODIFICOU: '&6* &fA quantia de almas do jogador {jogador} foi setada para {valor}'
+  RESGATOUALMA: '&e* &fVocê resgatou a alma de {jogador}'
+  ALMASRESGATADAS: '&6* &fAlmas resgatadas com sucesso'
+  ITEMINVALIDO: '&6* &fEste item não é valido.'
+  COLOQUEITEM: '&6* &cColoque um item no slot vazio.'
+  TROCAEFETUADA: '&6* &fCompra efetuada com sucesso.'
+  ALMASINSUFICIENTES: '&6* &cVocê não tem almas suficientes.'
+  RESGATECANCELADO: '&6* &cResgate cancelado.'
+  HELP:
+    - ' '
+    - '&6* &f/almas - &eVer a sua quantidade de almas.'
+    - '&6* &f/almas mercador - &eVeja o mercador.'
+    - '&6* &f/almas top - &eVeja o top almas.'
+    - '&6* &f/almas (jogador) - &eVeja a quantidade de almas de outro jogador'
+    - ' '
+  HELPADMIN:
+    - ' '
+    - '&6* &f/almas - &eVer a sua quantidade de almas.'
+    - '&6* &f/almas mercador - &eVeja o mercador.'
+    - '&6* &f/almas top - &eVeja o top almas.'
+    - '&6* &f/almas (jogador) - &eVeja a quantidade de almas de outro jogador'
+    - '&6* &f/almas setar (jogador) (quantidade) - &eSeta a quantidade de almas do jogador'
+    - '&6* &f/almas setmercador - &eSeta o mercador.'
+    - '&6* &f/giveespada - &ePegue a espada e retire os NPCs'
+    - '&6* &f/almas reload - &eRecarrega a config.'
+    - ' '
+# Nome do mercador
+MERCADOR:
+  NOME: '&8* &7Mercador'
+# Inventario do mercador
+  INVENTARIO:
+    NOME: '&cAlmas'
+    ITENS:
+      MATERIALRESTANTE: 'IRON_FENCE'
+      RESGATAR:
+        NOME: '&aResgatar almas'
+        ID: 397
+        DATA: 0
+        SLOT: 12
+        LORE:
+          - ' '
+          - '&cClique aqui para resgatar suas almas.'
+          - ' '
+      ACEITAR:
+        NOME: '&aResgatar almas'
+        ID: 35
+        DATA: 5
+        LORE:
+          - ' '
+          - '&cResgate para confirmar'
+          - ' '
+      RECUSAR:
+        NOME: '&cRecusar'
+        ID: 35
+        DATA: 14
+      MERCADONEGRO:
+        NOME: '&aMercado Negro'
+        ID: 397
+        DATA: 1
+        SLOT: 16
+        LORE:
+          - ' '
+          - '&cTroque almas por itens.'
+          - ' '
+# Formato do /almas top
+FORMATO:
+  ACIMA: '&eTop almas do servidor.'
+  ABAIXO: '%lugarº %player: %quantia'
+# Alma que serÃ¡ adicionada no inventario do jogador ao matar o outro (Com uma certa chance)
+ALMA:
+  NOME: '&6Alma de {jogador}'
+  GLOW: true
+  LORE:
+    - ' '
+    - '&e* &fTroque esta no mercado negro'
+    - '&e* &fE consiga itens!'
+    - ' '
+# Inventario de compras ou trocar como vocÃª preferir.
+INVENTARIO:
+  NOME: '&7Mercador'
+  TAMANHO: 54
+  ITENS:
+    a:
+      ID: 1
+      QUANTIDADE: 1
+      DATA: 0
+      NOME: '&aItem Teste'
+      ENCANTAMENTOS: sharpness:1-unbreaking:1
+      LORE:
+      - ' '
+      - '&cItem teste'
+      - '&cValor: 15'
+      - ' '
+      SLOT: 1
+      GLOW: true
+      VALOR: 15

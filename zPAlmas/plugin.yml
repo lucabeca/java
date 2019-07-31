@@ -1,0 +1,10 @@
+name: zPAlmas
+version: 1.2
+author: (zPatuncio_)
+main: me.patuncio.almas.Main
+description: Plugin de almas
+
+commands:
+  almas:
+    description: Comando para ver suas almas e tudo mais, /almas help
+  giveespada:
