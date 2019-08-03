@@ -1,4 +1,4 @@
-﻿#
+#
 # zPAlmas v1.2
 # Desenvolvido por zPatuncio_
 #
@@ -139,6 +139,9 @@ INVENTARIO:
       DATA: 0
       NOME: '&aItem Teste'
       ENCANTAMENTOS: sharpness:1-unbreaking:1
+      COMANDOS:
+        - 'darkit tal <player>'
+        - 'bc &aO Jogador &b<player> adquiriu um item teste.'
       LORE:
       - ' '
       - '&cItem teste'
